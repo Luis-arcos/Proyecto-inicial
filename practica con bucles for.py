@@ -38,10 +38,15 @@ while True:
 
 		
 ######NUEVO BLOQUE#######		
-edades = int(input("ingresa tu edad: "))
-
-for edad in edades:
-	if edad % 2 == 0:
-		print ("tu edad es numero par")
-	else:
-		print ("tu edad es numero impar")
+while True:
+	edades = input("ingresa tu edad separadaso por comas: ").split(",")
+	for edad in edades:
+		edad = int(edad)
+		if edad % 2 == 0:
+			print (edad, "tu edad es numero par")
+		else:
+			print (edad, "tu edad es numero impar")
+	print ("desea añadir mas edades?")
+	respuesta = input ("si/no; ")
+	if respuesta == "no":
+		break
